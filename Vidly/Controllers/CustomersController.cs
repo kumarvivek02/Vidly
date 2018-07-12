@@ -25,8 +25,8 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
 
-            //  var customers = _context.Customers.Include(c => c.MembershipType).ToList(); //ToList() forces DB query when this line is executed
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();  //ToList() forces DB query when this line is executed
             return View(customers);
            
         }
@@ -41,10 +41,9 @@ namespace Vidly.Controllers
         public ActionResult Details(int? id)
         {
 
-            var customer = _context.Customers.SingleOrDefault(cus => cus.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(cus => cus.Id == id);
            
-                        if (customer == null)
-                                return HttpNotFound();
+                        if (customer == null)   return HttpNotFound();
             
                         return View(customer);
         }

@@ -250,3 +250,16 @@ D:\Vidly Backup\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToNewsLetter.res
 D:\Vidly Backup\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
 D:\Vidly Backup\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipType.resources
 D:\Vidly Backup\Vidly\obj\Debug\Vidly.Migrations.ApplyingAnnotationsToCustomerName.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToNewsLetter.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipType.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyingAnnotationsToCustomerName.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedNameToMembershipType.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdateNameColumninMembershipType.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdateToCustomer.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedNameRequiredAnnotationInMembershipType.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.CreateMovieTable.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedAnnotationToMovie.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdateGenreDB.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.updateMovieDBWithMovies.resources
+D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.updateMovieDBWithMovies1.resources
