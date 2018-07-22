@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Vidly.Models
 {
-    public class Customer:IEnumerable
+    public class Customer
     {
         public int Id { get; set; }
 
@@ -20,15 +20,15 @@ namespace Vidly.Models
         public MembershipType MembershipType { get; set; } //Navigational Property
 
         [Display(Name="Membership Type")]
-        public byte MembershipTypeId { get; set; }
+        public byte MembershipTypeId { get; set; } //byte means implicit validation check & error if no value provided
 
         [Display(Name ="Date of Birth")]
         public DateTime? Birthdate  { get; set; }
 
 
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+        //public IEnumerator GetEnumerator()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

@@ -6,34 +6,40 @@
 
 @if (!Model.Any())
 {
-        <p> We don't have any customers yet.</p>
+    <p> We don't have any customers yet.</p>
 }
 else
 {
-<div>
-    <table class="table table-bordered table-hover">
-       
+    <div>
+        @Html.ActionLink("New Customer", "New", "Customers", null, new { @class = "btn btn-primary" })
+    </div>
+    <br />
+
+    <div>
+        <table class="table table-bordered table-hover">
+
             <tr>
                 <th>Customer</th>
                 <th>Membership Type</th>
             </tr>
-       
-        @foreach (var customer in Model)
-        {
 
-            <tr>
-                <td>
-                    <h3>
-                        @Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null)
-                       
-                    </h3>
-                </td>
-                <td><h3>
-                    @customer.MembershipType.Name
-                    </h3>
-                </td>
-            </tr>
-        }
-    </table>
-</div>
+            @foreach (var customer in Model)
+            {
+
+                <tr>
+                    <td>
+                        <h3>
+                            @Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null)
+
+                        </h3>
+                    </td>
+                    <td>
+                        <h3>
+                            @customer.MembershipType.Name
+                        </h3>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
 }

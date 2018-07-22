@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
 using Vidly.Migrations;
+using System.Data.Entity.Validation;
 
 namespace Vidly.Controllers
 {
@@ -42,8 +43,9 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var genre = _context.Genres.ToList();
-            var newMovieViewModel = new MovieFormViewModel
+            var newMovieViewModel = new MovieFormViewModel()
             {
+               
                 Genres = genre
             };
 
@@ -65,17 +67,29 @@ namespace Vidly.Controllers
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
             if (movie == null) return HttpNotFound();
 
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel(movie)
             {
-                Movie = movie,
+              
                 Genres = _context.Genres.ToList()
             };
             return View("MovieForm", viewModel);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            //If ModelState Validation Fails, return to form with validation errors
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel(movie)
+                {
+                    
+                    Genres = _context.Genres.ToList()
+
+                };
+                return View("MovieForm", viewModel);
+            }
             //Id==0 => New customer
             if (movie.Id == 0)
             {
@@ -91,7 +105,17 @@ namespace Vidly.Controllers
                 movieInDB.NumberInStock = movie.NumberInStock;
 
             }
-            _context.SaveChanges();
+            //Before saving, use try catch to see if any exceptions
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+
+                Console.WriteLine(e);
+            }
+            
 
             return RedirectToAction("Index", "Movies");
         }

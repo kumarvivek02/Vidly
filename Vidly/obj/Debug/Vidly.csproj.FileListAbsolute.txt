@@ -119,7 +119,6 @@ D:\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
 D:\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 D:\Vidly\Vidly\obj\Debug\Vidly.dll
 D:\Vidly\Vidly\obj\Debug\Vidly.pdb
-D:\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
 D:\Vidly\Vidly\obj\Debug\Vidly.Migrations.Initialcommit.resources
 D:\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 D:\Vidly Backup\Vidly\bin\ApplicationInsights.config
@@ -399,3 +398,9 @@ E:\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
 E:\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
 E:\Vidly\Vidly\obj\Debug\Vidly.dll
 E:\Vidly\Vidly\obj\Debug\Vidly.pdb
+D:\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+D:\Vidly\Vidly\bin\System.Web.Http.dll
+D:\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+D:\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+D:\Vidly\Vidly\bin\System.Web.Http.xml
+D:\Vidly\Vidly\bin\System.Web.Http.WebHost.xml

@@ -47,6 +47,7 @@ namespace Vidly.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                Customer=new Customer(),
                 MembershipTypes = membershipTypes,
 
             };
@@ -54,11 +55,26 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
+            //ModelState is used to validate parameter passed based on annotations defined on Model class
+            //If parameter is not valid, we re direct user to form 
+            if(!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel()
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+
+                };
+                return View("CustomerForm",viewModel);
+            }
+
+            //Else we Add New customer
             if (customer.Id == 0)
             { _context.Customers.Add(customer); }
-            else
+            else //Or update existing customer
             {
                 //Customer object from DB
                 var customerInDB = _context.Customers.Single(c => c.Id == customer.Id);
