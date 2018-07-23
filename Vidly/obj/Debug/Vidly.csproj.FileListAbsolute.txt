@@ -404,3 +404,6 @@ D:\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
 D:\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
 D:\Vidly\Vidly\bin\System.Web.Http.xml
 D:\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+D:\Vidly\Vidly\bin\AutoMapper.dll
+D:\Vidly\Vidly\bin\AutoMapper.xml
+D:\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Vidly.Models
 {
-    public class Movie : IEnumerable
+    public class Movie  
     {
         public int Id { get; set; }
 
@@ -32,9 +32,9 @@ namespace Vidly.Models
         [Range(1,20)]
         public byte NumberInStock { get; set; }
 
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+        //public IEnumerator GetEnumerator()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
